@@ -39,7 +39,7 @@ class InterviewAgent:
 
         # Initialize regular Kimi K2 model for interviewing (faster, no thinking overhead)
         self.llm = ChatOpenAI(
-            model="𝚔𝚒𝚖𝚒-𝚔𝟸-𝚝𝚑𝚒𝚗𝚔𝚒𝚗𝚐-𝚝𝚞𝚛𝚋𝚘",  # Regular Kimi model for conversational questions
+            model="kimi-k2-thinking-turbo",  # Regular Kimi model for conversational questions
             api_key=settings.moonshot_api_key,
             base_url=settings.moonshot_base_url,
             temperature=0.8,
@@ -315,4 +315,3 @@ class InterviewAgent:
             "turn_count": current_state.values.get("turn_count", 0),
             "is_complete": current_state.values.get("is_complete", False),
         }
-
